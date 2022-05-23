@@ -1,0 +1,11 @@
+package entidades;
+
+public class Contrato {
+	private String cliente;
+	private String servico;
+	private String funcionario;
+	
+	
+	
+	
+}

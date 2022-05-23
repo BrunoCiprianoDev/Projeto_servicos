@@ -1,0 +1,26 @@
+package teste;
+
+import entidades.*;
+
+public class Teste {
+	public static void main(String[] args) {
+		Servico servicoUm = new Servico("Limpeza da fachada", 45, 5, 6);
+		//System.out.println(servicoUm.toString());
+		
+		Cliente clienteUm = new Cliente("José", "da Sila", "dasilva981@ig.com.br", "homem");
+		//System.out.println(clienteUm.toString());
+		
+		Funcionario funcionarioUm = new Funcionario("Jaquim", "da Silva", "funcionario981@empresa.com.br", "homem");
+		//System.out.println(funcionarioUm.toString());
+	
+	
+		Contrato contratoUm = new Contrato(servicoUm, clienteUm, funcionarioUm);
+		Contrato contratoDois = new Contrato(servicoUm, clienteUm, funcionarioUm);
+		Contrato contratoTres = new Contrato(servicoUm, clienteUm, funcionarioUm);
+		System.out.println(contratoUm.toString());
+		System.out.println(contratoDois.toString());
+		System.out.println(contratoTres.toString());
+	
+	}
+
+}

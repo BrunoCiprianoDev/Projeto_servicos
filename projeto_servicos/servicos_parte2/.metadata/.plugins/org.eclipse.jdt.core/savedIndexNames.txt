@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+/home/bcf/Documentos/workspace_lp1/projeto_servicos/servicos_parte2/.metadata/.plugins/org.eclipse.jdt.core
+1472106326.index
+2949097923.index
+1865797976.index

@@ -1,0 +1,9 @@
+package teste;
+
+public class TesteArray {
+	public static void main(String[] args) {
+		int vetor[] = new int[5];
+		vetor[0] = 10;
+		System.out.println(vetor.length);
+	}
+}

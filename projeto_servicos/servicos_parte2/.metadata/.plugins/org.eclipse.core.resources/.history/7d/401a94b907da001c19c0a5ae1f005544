@@ -1,0 +1,10 @@
+package teste;
+
+import entidades.Servico;
+
+public class Teste {
+	public static void main(String[] args) {
+		Servico servicoUm = new Servico("Limpeza da fachada", "");
+	}
+
+}
