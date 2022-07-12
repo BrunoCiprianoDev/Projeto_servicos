@@ -7,7 +7,6 @@ public class Historico {
 	private ArrayList<Contrato> listaDeContratos;
 	
 	public Historico(Contrato contrato) {
-		this.listaDeContratos = new ArrayList<>();
 		this.listaDeContratos.add(contrato);
 	}
 	
@@ -36,6 +35,7 @@ public class Historico {
 	}
 	
 	public String informacoesDeUmDeterminadoContrato(String codigoPrestacaoServico) {
+		// Item 12 -> retornar todas as informações pertinentes para um determinado contrato;
 		for(Contrato contrato : this.listaDeContratos) {
 			if(codigoPrestacaoServico.equals(contrato.getCodigoPrestacaoServico())) {
 				return contrato.toString();

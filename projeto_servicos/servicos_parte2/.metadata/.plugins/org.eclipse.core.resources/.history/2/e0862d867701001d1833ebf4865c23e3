@@ -7,7 +7,6 @@ public class Historico {
 	private ArrayList<Contrato> listaDeContratos;
 	
 	public Historico(Contrato contrato) {
-		this.listaDeContratos = new ArrayList<>();
 		this.listaDeContratos.add(contrato);
 	}
 	
