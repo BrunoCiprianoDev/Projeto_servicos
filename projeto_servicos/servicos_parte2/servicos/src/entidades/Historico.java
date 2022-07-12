@@ -35,6 +35,25 @@ public class Historico {
 		return new ArrayList<Contrato>(this.listaDeContratos);
 	}
 	
+	public boolean removerContrato(String codigoPrestacaoServico) {
+		for(Contrato contrato : this.listaDeContratos) {
+			if(codigoPrestacaoServico.equals(contrato.getCodigoPrestacaoServico())) {
+				this.listaDeContratos.remove(contrato);
+				return true;
+			}
+		}
+		return false;
+	}
+	
+	public boolean verificarExistenciaDeUmContrato(String codigoPrestacaoServico) {
+		for(Contrato contrato : this.listaDeContratos) {
+			if(codigoPrestacaoServico.equals(contrato.getCodigoPrestacaoServico())) {
+				return true;
+			}
+		}
+		return false;
+	}
+	
 	public String informacoesDeUmDeterminadoContrato(String codigoPrestacaoServico) {
 		for(Contrato contrato : this.listaDeContratos) {
 			if(codigoPrestacaoServico.equals(contrato.getCodigoPrestacaoServico())) {

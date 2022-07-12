@@ -22,6 +22,16 @@ public class Contrato {
 		this.funcionario = funcionario;
 	}
 	
+	public Contrato(Contrato contrato) {
+		this.codigoPrestacaoServico = contrato.getCodigoPrestacaoServico();
+		this.anoInicioContrato = contrato.anoInicioContrato;
+		this.mesInicioContrato = contrato.mesInicioContrato;
+		this.servico = contrato.getServico();
+		this.cliente = contrato.getCliente();
+		this.funcionario = contrato.getFuncionario();
+	}
+	
+	
 	private void gerarNumeroPrestacaoServico() {
 		if(Contrato.parametroData.getYear() != LocalDate.now().getYear()) {
 			Contrato.parametroData = LocalDate.now();
@@ -43,7 +53,7 @@ public class Contrato {
 	}
 	
 	public Servico getServico() {
-		return servico;
+		return new Servico(this.servico);
 	}
 
 	public void setServico(Servico servico) {
@@ -51,7 +61,7 @@ public class Contrato {
 	}
 
 	public Cliente getCliente() {
-		return cliente;
+		return new Cliente(this.cliente);
 	}
 
 	public void setCliente(Cliente cliente) {
@@ -59,7 +69,7 @@ public class Contrato {
 	}
 
 	public Funcionario getFuncionario() {
-		return funcionario;
+		return new Funcionario(this.funcionario);
 	}
 
 	public void setFuncionario(Funcionario funcionario) {

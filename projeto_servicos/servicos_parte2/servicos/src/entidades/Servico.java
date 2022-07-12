@@ -16,6 +16,14 @@ public class Servico {
 		this.horasTrabalhadas = horasTrabalhadas;
 	}
 	
+	public Servico(Servico servico) {
+		this.codigoServico = servico.codigoServico;
+		this.descricao = servico.descricao;
+		this.valorHora = servico.valorHora;
+		this.horasPrevistas = servico.horasPrevistas;
+		this.horasTrabalhadas = servico.horasTrabalhadas;
+	}
+	
 	public double calcularValorOrcamento() {
 		return this.horasPrevistas * this.valorHora;
 	}

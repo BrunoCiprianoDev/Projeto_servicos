@@ -16,6 +16,14 @@ public class Cliente {
 		this.sexo = sexo;
 	}
 	
+	public Cliente(Cliente cliente) {
+		this.codigoCliente = cliente.codigoCliente;
+		this.nome = cliente.getNome();
+		this.sobrenome = cliente.getSobrenome();
+		this.email = cliente.email;
+		this.sexo = cliente.sexo;
+	}
+	
 	public String getCodigoCliente() {
 		return this.codigoCliente;
 	}

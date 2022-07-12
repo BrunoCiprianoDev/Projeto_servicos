@@ -16,6 +16,14 @@ public class Funcionario {
 		this.sexo = sexo;
 	}
 	
+	public Funcionario(Funcionario funcionario) {
+		this.codigoFuncionario = funcionario.codigoFuncionario;
+		this.nome = funcionario.getNome();
+		this.sobrenome = funcionario.getSobrenome();
+		this.email = funcionario.getEmail();
+		this.sexo = funcionario.getSexo();
+	}
+	
 	public String getCodigoCliente() {
 		return this.codigoFuncionario;
 	}

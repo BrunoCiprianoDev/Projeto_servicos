@@ -1,0 +1,7 @@
+package teste;
+
+public class testeParteTres {
+	public static void main(String...args) {
+		
+	}
+}
