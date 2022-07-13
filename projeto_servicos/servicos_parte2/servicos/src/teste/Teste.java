@@ -10,17 +10,17 @@ public class Teste {
 		Servico servicoQuatro = new Servico("Limpeza vidraça", 50, 4, 4);
 		Servico servicoCinco = new Servico("Limpeza jardim", 60, 7, 8);
 	
-		Cliente clienteUm = new Cliente("José", "da Sila", "dasilva981@ig.com.br", "masculino");
-		Cliente clienteDois = new Cliente("Maria", "da Silva", "masilva980@ig.com.br", "feminino");
-		Cliente clienteTres = new Cliente("Lucia", "Ribeiro", "ribeiro987@oi.com.br", "femino");
-		Cliente clienteQuatro = new Cliente("Adenosina", "Trifosfato", "atplva987@uai.com.br", "feminino");
-		Cliente clienteCinco = new Cliente("Joaquina", "Mitocondria", "jm981@gmail.com.br", "masculino");
-		Cliente clienteSeis = new Cliente("Európio", "Lantanideo", "aleatorio@outlook.com.br", "masculino");
+		Cliente clienteUm = new Cliente("José", "da Sila", "dasilva981@ig.com.br", true);
+		Cliente clienteDois = new Cliente("Maria", "da Silva", "masilva980@ig.com.br", false);
+		Cliente clienteTres = new Cliente("Lucia", "Ribeiro", "ribeiro987@oi.com.br", false);
+		Cliente clienteQuatro = new Cliente("Adenosina", "Trifosfato", "atplva987@uai.com.br", false);
+		Cliente clienteCinco = new Cliente("Joaquina", "Mitocondria", "jm981@gmail.com.br", true);
+		Cliente clienteSeis = new Cliente("Európio", "Lantanideo", "aleatorio@outlook.com.br", true);
 		
-		Funcionario funcionarioUm = new Funcionario("Fulano", "de Tal", "ciclano911@empresa.com.br", "masculino");
-		Funcionario funcionarioDois = new Funcionario("Érbio", "Periodico", "er981@empresa.com.br", "masculino");
-		Funcionario funcionarioTres = new Funcionario("TypewriterWoman", "Mouse", "benzenoo981@empresa.com.br", "feminino");
-		Funcionario funcionarioQuatro = new Funcionario("Fulana", "de Tal", "ciclana981@empresa.com.br", "feminino");
+		Funcionario funcionarioUm = new Funcionario("Fulano", "de Tal", "ciclano911@empresa.com.br", true);
+		Funcionario funcionarioDois = new Funcionario("Érbio", "Periodico", "er981@empresa.com.br", true);
+		Funcionario funcionarioTres = new Funcionario("TypewriterWoman", "Mouse", "benzenoo981@empresa.com.br", true);
+		Funcionario funcionarioQuatro = new Funcionario("Fulana", "de Tal", "ciclana981@empresa.com.br", false);
 
 		Contrato contratoUm = new Contrato(servicoUm, clienteUm, funcionarioUm);
 		Contrato contratoDois = new Contrato(servicoDois, clienteDois, funcionarioDois);
@@ -32,7 +32,7 @@ public class Teste {
 		Contrato contratoOito = new Contrato(servicoTres, clienteQuatro, funcionarioTres);
 		Contrato contratoNove = new Contrato(servicoQuatro, clienteDois, funcionarioQuatro);
 		Contrato contratoDez = new Contrato(servicoCinco, clienteUm, funcionarioUm);
-		Contrato contratoOnze = new Contrato(new Servico("Limpeza telhado", 80, 3, 2), new Cliente("Ctrêspeó", "Random", "rnadom991.com", "masculino"), funcionarioUm);
+		Contrato contratoOnze = new Contrato(new Servico("Limpeza telhado", 80, 3, 2), new Cliente("Ctrêspeó", "Random", "rnadom991.com", true), funcionarioUm);
 	
 		Historico historico = new Historico(contratoUm);
 		historico.setContrato(contratoDois);
