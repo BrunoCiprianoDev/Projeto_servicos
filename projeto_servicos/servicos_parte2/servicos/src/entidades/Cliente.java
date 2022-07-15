@@ -26,4 +26,11 @@ public class Cliente extends Pessoa {
 				"\n E-mail: "+super.getEmail()+
 				"\n Sexo: "+super.getSexo();
 	}
+
+	@Override
+	public String tratarNome() {
+		return (this.getSexo()==true) ? 
+				"Senhor "+this.getNome():
+				"Senhora "+this.getNome();
+	}
 }

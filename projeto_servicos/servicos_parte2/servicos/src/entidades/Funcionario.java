@@ -25,4 +25,11 @@ public class Funcionario extends Pessoa {
 				"\n E-mail: "+super.getEmail()+
 				"\n Sexo: "+super.getSexo();
 	}
+
+	@Override
+	public String tratarNome() {
+			return (this.getSexo()==true) ? 
+					"Prezado senhor "+this.getNome()+" "+this.getSobrenome() :
+					"Prezada senhora "+this.getNome()+" "+this.getSobrenome() ;
+	}
 }

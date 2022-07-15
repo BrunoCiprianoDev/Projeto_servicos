@@ -1,6 +1,6 @@
 package entidades;
-
-public abstract class Pessoa {
+import interfaces.Tratamento;
+public abstract class Pessoa implements Tratamento {
 		private String nome;
 		private String sobrenome;
 		private String email;
