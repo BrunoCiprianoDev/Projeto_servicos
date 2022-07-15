@@ -14,7 +14,7 @@ public class Funcionario extends Pessoa {
 		this.codigoFuncionario = funcionario.codigoFuncionario;
 	}
 	
-	public String getCodigoCliente() {
+	public String getCodigoFuncionario() {
 		return this.codigoFuncionario;
 	}
 

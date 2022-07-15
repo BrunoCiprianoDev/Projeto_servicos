@@ -14,7 +14,7 @@ public class Contrato {
 	private Funcionario funcionario;
 	
 	public Contrato(Servico servico, Cliente cliente, Funcionario funcionario) {
-		this.gerarNumeroPrestacaoServico();
+		this.gerarCodigoPrestacaoServico();
 		this.mesInicioContrato = Contrato.parametroData.getMonthValue();
 		this.anoInicioContrato = Contrato.parametroData.getYear(); 
 		this.servico = servico;
@@ -32,7 +32,7 @@ public class Contrato {
 	}
 	
 	
-	private void gerarNumeroPrestacaoServico() {
+	private void gerarCodigoPrestacaoServico() {
 		if(Contrato.parametroData.getYear() != LocalDate.now().getYear()) {
 			Contrato.parametroData = LocalDate.now();
 			Contrato.parametroCodigo = 0;
