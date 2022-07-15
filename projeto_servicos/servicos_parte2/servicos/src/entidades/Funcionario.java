@@ -17,7 +17,7 @@ public class Funcionario extends Pessoa {
 	public String getCodigoFuncionario() {
 		return this.codigoFuncionario;
 	}
-
+	
 	@Override
 	public String toString() {
 		return "\n Código do funcionario: "+this.codigoFuncionario+
@@ -32,4 +32,5 @@ public class Funcionario extends Pessoa {
 					"Prezado senhor "+this.getNome()+" "+this.getSobrenome() :
 					"Prezada senhora "+this.getNome()+" "+this.getSobrenome() ;
 	}
+	
 }
