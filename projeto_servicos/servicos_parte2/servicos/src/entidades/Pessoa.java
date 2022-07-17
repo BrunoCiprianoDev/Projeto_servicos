@@ -1,6 +1,6 @@
 package entidades;
-import interfaces.Tratamento;
-public abstract class Pessoa implements Tratamento {
+
+public abstract class Pessoa {
 		private String nome;
 		private String sobrenome;
 		private String email;
@@ -51,11 +51,14 @@ public abstract class Pessoa implements Tratamento {
 		public void setSexo(boolean sexo) {
 			this.sexo = sexo;
 		}
+		
+		public abstract String gerarCodigo();
+		
+		public abstract String tratarNome();
 
 		@Override
 		public String toString() {
-			return  "\n Nome do cliente: "+this.nome+" "+this.sobrenome+
-					"\n E-mail: "+this.email+
-					"\n Sexo: "+this.sexo;
+			return  "\n E-mail: "+this.email+
+					"\n Sexo: "+((sexo == true) ? "Homem"  : "Mulher");
 		}
 }

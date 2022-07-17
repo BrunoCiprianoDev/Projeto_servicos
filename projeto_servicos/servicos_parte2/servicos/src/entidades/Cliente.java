@@ -6,8 +6,7 @@ public class Cliente extends Pessoa {
 	
 	public Cliente(String nome, String sobrenome, String email, boolean sexo) {
 		super(nome, sobrenome, email, sexo);
-		this.codigoCliente = "C"+(++parametroCodigoCliente);
-		
+		this.codigoCliente = this.gerarCodigo();	
 	}
 	
 	public Cliente(Cliente cliente) {
@@ -22,9 +21,8 @@ public class Cliente extends Pessoa {
 	@Override
 	public String toString() {
 		return "\n Código do cliente: "+this.getCodigoCliente()+
-				"\n Nome do cliente: "+super.getNome()+" "+super.getSobrenome()+
-				"\n E-mail: "+super.getEmail()+
-				"\n Sexo: "+super.getSexo();
+				"\n Nome do cliente: "+this.getNome()+" "+this.getSobrenome()+
+				super.toString();
 	}
 
 	@Override
@@ -32,5 +30,10 @@ public class Cliente extends Pessoa {
 		return (this.getSexo()==true) ? 
 				"Senhor "+this.getNome():
 				"Senhora "+this.getNome();
+	}
+
+	@Override
+	public String gerarCodigo() {	
+		return "C"+(++parametroCodigoCliente);
 	}
 }

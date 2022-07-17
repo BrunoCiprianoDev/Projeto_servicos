@@ -29,8 +29,7 @@ public class Contrato {
 		this.servico = contrato.getServico();
 		this.cliente = contrato.getCliente();
 		this.funcionario = contrato.getFuncionario();
-	}
-	
+	}	
 	
 	private void gerarCodigoPrestacaoServico() {
 		if(Contrato.parametroData.getYear() != LocalDate.now().getYear()) {
@@ -69,9 +68,9 @@ public class Contrato {
 	}
 
 	public Funcionario getFuncionario() {
-		return new Funcionario(this.funcionario);
+		return this.funcionario;
 	}
-
+	
 	public void setFuncionario(Funcionario funcionario) {
 		this.funcionario = funcionario;
 	}
@@ -83,7 +82,8 @@ public class Contrato {
 				"\n Ano de inicio do contrato: "+this.anoInicioContrato+
 				"\n"+cliente.toString()+
 				"\n"+funcionario.toString()+
-				"\n"+servico.toString();
+				" ("+IdentificadorFuncionario.getIdentificacao(this.funcionario)+
+				")\n"+servico.toString();
 	}
 
 }

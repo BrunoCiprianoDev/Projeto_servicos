@@ -17,10 +17,10 @@ public class Teste {
 		Cliente clienteCinco = new Cliente("Joaquina", "Mitocondria", "jm981@gmail.com.br", true);
 		Cliente clienteSeis = new Cliente("Európio", "Lantanideo", "aleatorio@outlook.com.br", true);
 		
-		Funcionario funcionarioUm = new Funcionario("Fulano", "de Tal", "ciclano911@empresa.com.br", true);
-		Funcionario funcionarioDois = new Funcionario("Érbio", "Periodico", "er981@empresa.com.br", true);
-		Funcionario funcionarioTres = new Funcionario("TypewriterWoman", "Mouse", "benzenoo981@empresa.com.br", true);
-		Funcionario funcionarioQuatro = new Funcionario("Fulana", "de Tal", "ciclana981@empresa.com.br", false);
+		Assalariado funcionarioUm = new Assalariado("Fulano", "de Tal", "ciclano911@empresa.com.br", true, 1100);
+		Comissionado funcionarioDois = new Comissionado("Érbio", "Periodico", "er981@empresa.com.br", true, 0.05, 3000);
+		Horista funcionarioTres = new Horista("TypewriterWoman", "Mouse", "benzenoo981@empresa.com.br", true, 15, 80);
+		Assalariado funcionarioQuatro = new Assalariado("Fulana", "de Tal", "ciclana981@empresa.com.br", false,  1775);
 
 		Contrato contratoUm = new Contrato(servicoUm, clienteUm, funcionarioUm);
 		Contrato contratoDois = new Contrato(servicoDois, clienteDois, funcionarioDois);
@@ -47,6 +47,9 @@ public class Teste {
 		historico.setContrato(contratoOnze);
 		
 		System.out.println(historico.toString());
+		
+		System.out.println(IdentificadorFuncionario.getIdentificacao(funcionarioQuatro));
+		
 		//System.out.println(historico.informacoesDeUmDeterminadoContrato("2022-2"));
 
 	
